@@ -1,6 +1,6 @@
 public class TestElectronicWallet {
     public static void main(String[] args) {
-        ElectronicWallet wallet1 = new ElectronicWallet();
+        Electronic wallet1 = new Electronic();
 
         System.out.println("FIRST TEST");
         if (wallet1.setOwner("Valeria") == true) {

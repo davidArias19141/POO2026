@@ -1,4 +1,4 @@
-public class ElectronicWallet{
+public class Electronic{
     private String owner;
     private double balance;
     public String getOwner(){

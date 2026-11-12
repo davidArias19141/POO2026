@@ -1,7 +1,7 @@
 public class ElectronicWallet{
-        private String owner;
+    private String owner;
     private double balance;
-   public String getOwner(){
+    public String getOwner(){
         return owner;
     }
     public double getBalance(){

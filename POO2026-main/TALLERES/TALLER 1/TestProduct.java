@@ -1,56 +1,96 @@
 public class TestProduct {
-    private String guest;
-    private int roomNumber;
-    private int numberOfNights;
-    private double pricePerNight;
-
-    public String readGuest() {
-        return guest;
-    }
-
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public int getNumberOfNights() {
-        return numberOfNights;
-    }
-
-    public double getPricePerNight() {
-        return pricePerNight;
-    }
-
-    public boolean setGuest(String newGuest) {
-        if (!newGuest.equals("")) {
-            guest = newGuest;
-            return true;
+    public static void main(String[] args) {
+        Product product1 = new Product();
+        // case1
+        if (product1.setName("Valeria") == true) {
+            System.out.println("nombre aceptado con exito");
+        } else {
+            System.out.println("nombre no aceptado");
         }
-        return false;
-    }
-
-    public void setRoomNumber(int newRoomNumber) {
-        roomNumber = newRoomNumber;
-
-    }
-
-    public boolean setNumberOfNights(int newNumberOfNights) {
-        if (newNumberOfNights > 0) {
-            numberOfNights = newNumberOfNights;
-            return true;
+        // price
+        if (product1.setPrice(20) == true) {
+            System.out.println("precio valido");
+        } else {
+            System.out.println("precio invalido");
         }
-        return false;
-    }
-
-    public boolean setPricePerNight(int newPricePerNight) {
-        if (newPricePerNight > 0) {
-            pricePerNight = newPricePerNight;
-            return true;
+        // stock
+        if (product1.setStock(20) == true) {
+            System.out.println("stock agragdo con exito");
+        } else {
+            System.out.println("stock no agragado, fuera de limites");
         }
-        return false;
-    }
+        // case 2
+        if (product1.setName("") == true) {
+            System.out.println("nombre aceptado con exito");
+        } else {
+            System.out.println("nombre no aceptado");
+        }
+        // price
+        if (product1.setPrice(20) == true) {
+            System.out.println("precio valido");
+        } else {
+            System.out.println("precio invalido");
+        }
+        // stock
+        if (product1.setStock(20) == true) {
+            System.out.println("stock agragdo con exito");
+        } else {
+            System.out.println("stock no agragado, fuera de limites");
+        }
+        // case3
+        if (product1.setName("Valeria") == true) {
+            System.out.println("nombre aceptado con exito");
+        } else {
+            System.out.println("nombre no aceptado");
+        }
+        // price
+        if (product1.setPrice(-60000) == true) {
+            System.out.println("precio valido");
+        } else {
+            System.out.println("precio invalido");
+        }
+        // stock
+        if (product1.setStock(20) == true) {
+            System.out.println("stock agragdo con exito");
+        } else {
+            System.out.println("stock no agragado, fuera de limites");
+        }
+        // case4
+        if (product1.setName("Valeria") == true) {
+            System.out.println("nombre aceptado con exito");
+        } else {
+            System.out.println("nombre no aceptado");
+        }
+        // price
+        if (product1.setPrice(20) == true) {
+            System.out.println("precio valido");
+        } else {
+            System.out.println("precio invalido");
+        }
+        // stock
+        if (product1.setStock(-60) == true) {
+            System.out.println("stock agragdo con exito");
+        } else {
+            System.out.println("stock no agragado, fuera de limites");
+        }
+        // case5
+        if (product1.setName("") == true) {
+            System.out.println("nombre aceptado con exito");
+        } else {
+            System.out.println("nombre no aceptado");
+        }
+        // price
+        if (product1.setPrice(-20) == true) {
+            System.out.println("precio valido");
+        } else {
+            System.out.println("precio invalido");
+        }
+        // stock
+        if (product1.setStock(-70) == true) {
+            System.out.println("stock agragdo con exito");
+        } else {
+            System.out.println("stock no agragado, fuera de limites");
+        }
 
-    public double TotalCost() {
-        double totalCost = pricePerNight * numberOfNights;
-        return totalCost;
     }
 }
